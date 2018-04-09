@@ -77,3 +77,9 @@ countdown(1);
 
    setTimeout (checkAnswers, 60 * 1000);
   
+//start screen
+ function start() {
+    var start_button = document.getElementById(loadScreen);
+   document.body.removeChild(loadScreen);
+
+};
