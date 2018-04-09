@@ -70,8 +70,11 @@ countdown(1);
         }  else {
             incorrect++;
         }
-       alert("You got " + correct + " correct. and " + incorrect + " incorrect");
+    
+        alert("You got " + correct + " correct and " + incorrect + " incorrect.");
+        window.location.reload();
     }
 
-   setTimeout (checkAnswers, 5000);
+   setTimeout (checkAnswers, 10000);
   
+//reset function
