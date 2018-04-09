@@ -12,9 +12,9 @@
 <body>
 <div class="mainContainer">State Capitals</div>
 <br>
-    <div id="timer">2:00</div>
+    <div id="timer">00:30</div>
     <br>
-    <form>
+    <form name="trivia">
         1. What is the capital of New York?<br>
         <input type="radio" name="q1" value="a">New York<br>
         <input type="radio" name="q1" value="b">Albany<br>
@@ -41,9 +41,9 @@
         <input type="radio" name="q5" value="c">Madison
         <br><br>
 
-        <input type="submit" value="Submit">
-
-
+        <!-- <input type="submit" value="Submit" onclick="check()"> -->
+        <!-- <input type="button" value="submit" onclick="check()"> -->
+        <button type="button" value="submit" onclick="checkAnswers()">Submit</button>
       </form> 
 
     <script
