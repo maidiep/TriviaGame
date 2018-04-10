@@ -11,7 +11,8 @@ body {
 }
 
 div#loadScreen {
-    background: rgb(7, 145, 138);
+    /* background: rgb(7, 145, 138); */
+    background-image: url("../images/img1.png");
     opacity: 1;
     position: fixed;
     z-index: 10;

@@ -74,11 +74,12 @@ function countdown(minutes) {
         window.location.reload();
     }
 
-   setTimeout (checkAnswers, 60 * 1000);
+//    setTimeout (checkAnswers, 60 * 1000);
   
 //start screen
  function start() {
     var start_button = document.getElementById(loadScreen);
    document.body.removeChild(loadScreen);
    countdown(1);
+   setTimeout (checkAnswers, 60 * 1000);
 };
