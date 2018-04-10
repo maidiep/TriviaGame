@@ -41,6 +41,12 @@ function countdown(minutes) {
         var q3=document.trivia.q3.value;
         var q4=document.trivia.q4.value;
         var q5=document.trivia.q5.value;
+        var q6=document.trivia.q6.value;
+        var q7=document.trivia.q7.value;
+        var q8=document.trivia.q8.value;
+        var q9=document.trivia.q8.value;
+        var q10=document.trivia.q10.value;
+
         var correct = 0;
         var incorrect = 0;
 
@@ -50,7 +56,7 @@ function countdown(minutes) {
             incorrect++;
         }
         if(q2=="c") {
-            correct++
+            correct++;
         }  else {
             incorrect++;
         } 
@@ -69,7 +75,32 @@ function countdown(minutes) {
         }  else {
             incorrect++;
         }
-    
+        if (q6=="a") {
+            correct++;
+         }  else {
+             incorrect++;
+         }
+         if (q7=="b") {
+            correct++;
+         }  else {
+             incorrect++;
+         }
+         if (q8=="a") {
+            correct++;
+         }  else {
+             incorrect++;
+         }
+         if (q9=="a") {
+            correct++;
+         }  else {
+             incorrect++;
+         }
+         if (q10=="b") {
+            correct++;
+         }  else {
+             incorrect++;
+         }
+
         alert("You got " + correct + " right and " + incorrect + " wrong.");
         window.location.reload();
     }
