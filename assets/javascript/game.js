@@ -22,7 +22,6 @@ function countdown(minutes) {
     }
     tick();
 }
-
 countdown(1);
 
 // //which radio button was selected?

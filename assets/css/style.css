@@ -4,7 +4,10 @@
 }
 
 body {
-    background-image: url ("../../assets/images/images.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f3/Usa_edcp_relief_location_map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 div#loadScreen {
@@ -17,7 +20,11 @@ div#loadScreen {
     height: 1600px;
 }
 
-div#startButton {
+.jumbotron {
+    margin-top: 20px;  
+}
 
+form {
+    font-size: 24px;
 }
 
