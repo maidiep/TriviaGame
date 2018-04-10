@@ -4,14 +4,13 @@
 }
 
 body {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f3/Usa_edcp_relief_location_map.png");
+    background-image: url("https://cdn.dribbble.com/users/238864/screenshots/4166231/carbs_carbs_carbs_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 div#loadScreen {
-    background: rgb(124, 151, 173);
+    background: rgb(7, 145, 138);
     opacity: 1;
     position: fixed;
     z-index: 10;
@@ -22,9 +21,11 @@ div#loadScreen {
 
 .jumbotron {
     margin-top: 20px;  
+    background-size: cover;
 }
 
 form {
     font-size: 24px;
 }
+
 

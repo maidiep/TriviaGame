@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trivial Trivia</title>
+    <title>Baking Trivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
   <!-- Latest compiled and minified CSS -->
@@ -25,8 +25,8 @@
 
         <div class="container">
                 <div class="jumbotron" class="mainContainer">
-                  <h1>State Capital Trivia</h1>      
-                  <p>You have 1 minute to choose the correct capital for each state.</p>
+                  <h1>Baking Trivia</h1>      
+                  <p>You have 1 minute to choose the correct answer for each question.</p>
                 </div>
                 <p id="timerTitle">Time Remaining</p>
                 <h2 id="timer"></h2>           
@@ -36,32 +36,31 @@
     <br>
 <div id=questionsContainer>
     <form name="trivia">
-        1. What is the capital of New York?<br>
-        <input type="radio" name="q1" value="a"> New York<br>
-        <input type="radio" name="q1" value="b"> Albany<br>
-        <input type="radio" name="q1" value="c"> Broadway
+        1. What is blind baking?<br>
+        <input type="radio" name="q1" value="a"> not peeking in the oven<br>
+        <input type="radio" name="q1" value="b"> baking a crust without any filling<br>
+        <input type="radio" name="q1" value="c"> bake at any temperature
         <br><br>
-        2. What is the capital of Michigan?<br>
-        <input type="radio" name="q2" value="a"> Detroit<br>
-        <input type="radio" name="q2" value="b"> Heron<br>
-        <input type="radio" name="q2" value="c"> Lansing
+        2. Which would not be used to stabilize whipped cream?<br>
+        <input type="radio" name="q3" value="a"> gelatin<br>
+        <input type="radio" name="q3" value="b"> confectioner's sugar<br>
+        <input type="radio" name="q3" value="c"> cream of tartar
         <br><br>
-        3. What is the capital of Washington?<br>
-        <input type="radio" name="q3" value="a"> DC<br>
-        <input type="radio" name="q3" value="b"> Olympia<br>
-        <input type="radio" name="q3" value="c"> Seattle
+        3. How many is in a baker's dozen?<br>
+        <input type="radio" name="q2" value="a"> 11<br>
+        <input type="radio" name="q2" value="b"> 12<br>
+        <input type="radio" name="q2" value="c"> 13
         <br><br>
-        4. What is the capital of Connecticut?<br>
-        <input type="radio" name="q4" value="a"> Frankford<br>
-        <input type="radio" name="q4" value="b"> Hartford<br>
-        <input type="radio" name="q4" value="c"> Concord
+        4. How many tsp are in 1 tbs?<br>
+        <input type="radio" name="q5" value="a"> 2<br>
+        <input type="radio" name="q5" value="b"> 3<br>
+        <input type="radio" name="q5" value="c"> 4
         <br><br>
-        5. What is the capital of Wisconsin?<br>
-        <input type="radio" name="q5" value="a"> Milwaukee<br>
-        <input type="radio" name="q5" value="b"> Monroe<br>
-        <input type="radio" name="q5" value="c"> Madison
+        5. How do you make your own buttermilk?<br>
+        <input type="radio" name="q4" value="a"> milk and butter<br>
+        <input type="radio" name="q4" value="b"> milk and vinegar<br>
+        <input type="radio" name="q4" value="c"> milk and sugar
         <br><br>
-
         <!-- <input type="submit" value="Submit" onclick="check()"> -->
         <!-- <input type="button" value="submit" onclick="check()"> -->
         <button type="button" value="submit" onclick="checkAnswers()">Submit</button>

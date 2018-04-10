@@ -54,7 +54,7 @@ countdown(1);
         }  else {
             incorrect++;
         } 
-       if(q3=="b") {
+       if(q3=="c") {
             correct++;
         }  else {
             incorrect++;
@@ -64,7 +64,7 @@ countdown(1);
         }  else {
             incorrect++;
         }
-       if (q5=="c") {
+       if (q5=="b") {
            correct++;
         }  else {
             incorrect++;
