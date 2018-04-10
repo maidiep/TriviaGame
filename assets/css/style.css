@@ -7,6 +7,7 @@ body {
     background-image: url("https://cdn.dribbble.com/users/238864/screenshots/4166231/carbs_carbs_carbs_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+   
 }
 
 div#loadScreen {
@@ -25,7 +26,7 @@ div#loadScreen {
 }
 
 form {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 

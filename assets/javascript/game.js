@@ -22,7 +22,7 @@ function countdown(minutes) {
     }
     tick();
 }
-countdown(1);
+// countdown(1);
 
 // //which radio button was selected?
 //     $( "input[type='submit']" ).click(function( event ) {
@@ -80,5 +80,5 @@ countdown(1);
  function start() {
     var start_button = document.getElementById(loadScreen);
    document.body.removeChild(loadScreen);
-
+   countdown(1);
 };
