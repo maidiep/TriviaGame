@@ -13,8 +13,6 @@ function countdown(minutes) {
         } else {
 
             if(mins > 1){
-
-               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
                setTimeout(function () { countdown(mins - 1); }, 1000);
 
             }
@@ -23,15 +21,6 @@ function countdown(minutes) {
     tick();
 }
 // countdown(1);
-
-// //which radio button was selected?
-//     $( "input[type='submit']" ).click(function( event ) {
-//       if($("input[type='radio']").is(':checked')) { 
-//         console.log($("input[type='radio']:checked").val()); 
-//       }
-//       event.preventDefault();
-//   });
-  
 
 
 //function to check answers
@@ -49,67 +38,108 @@ function countdown(minutes) {
 
         var correct = 0;
         var incorrect = 0;
+        var unanswered = 0;
 
-        if(q1=="b") {
+        if (q1 == "" ) {
+            unanswered++;
+          } else if ( q1 == "b" ) {
             correct++;
-        }  else {
+          } else {
             incorrect++;
-        }
-        if(q2=="c") {
-            correct++;
-        }  else {
-            incorrect++;
-        } 
-       if(q3=="c") {
-            correct++;
-        }  else {
-            incorrect++;
-        }
-       if (q4=="b") {
-           correct++;
-        }  else {
-            incorrect++;
-        }
-       if (q5=="b") {
-           correct++;
-        }  else {
-            incorrect++;
-        }
-        if (q6=="a") {
-            correct++;
-         }  else {
-             incorrect++;
-         }
-         if (q7=="b") {
-            correct++;
-         }  else {
-             incorrect++;
-         }
-         if (q8=="a") {
-            correct++;
-         }  else {
-             incorrect++;
-         }
-         if (q9=="a") {
-            correct++;
-         }  else {
-             incorrect++;
-         }
-         if (q10=="b") {
-            correct++;
-         }  else {
-             incorrect++;
-         }
+          }
 
-        alert("You got " + correct + " right and " + incorrect + " wrong.");
-        window.location.reload();
+          if (q2 == "" ) {
+            unanswered++;
+          } else if ( q2 == "c" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+
+          if (q3 == "" ) {
+            unanswered++;
+          } else if ( q3 == "c" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+
+          if (q4 == "" ) {
+            unanswered++;
+          } else if ( q4 == "b" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+
+          if (q5 == "" ) {
+            unanswered++;
+          } else if ( q5 == "b" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+
+          if (q6 == "" ) {
+            unanswered++;
+          } else if ( q6 == "a" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+
+          if (q7 == "" ) {
+            unanswered++;
+          } else if ( q7 == "b" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+      
+          if (q8 == "" ) {
+            unanswered++;
+          } else if ( q8 == "a" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+        
+          if (q9 == "" ) {
+            unanswered++;
+          } else if ( q9 == "a" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+
+          if (q10 == "" ) {
+            unanswered++;
+          } else if ( q10 == "b" ) {
+            correct++;
+          } else {
+            incorrect++;
+          }
+         
+
+          
+          document.getElementById("correctResult").innerHTML = ("Right: " + correct);
+          document.getElementById("incorrectResult").innerHTML = ("Wrong: " + incorrect);  
+          document.getElementById("unansweredResult").innerHTML = ("Unanswered: " + unanswered); 
+
+
+
+
+
+        // window.location.reload();
+        // console.log("You got " + correct + " right and " + incorrect + " wrong. You did not answer " + unanswered + " questions.");
+        // window.location.reload();
     }
 
 //    setTimeout (checkAnswers, 60 * 1000);
   
 //start screen
  function start() {
-    var start_button = document.getElementById(loadScreen);
+    var start_button = document.getElementById("loadScreen");
    document.body.removeChild(loadScreen);
    countdown(1);
    setTimeout (checkAnswers, 60 * 1000);

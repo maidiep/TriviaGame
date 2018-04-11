@@ -1,94 +1,147 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Baking Trivia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Baking Trivia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-   
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
 </head>
-<body>
-    <div id="loadScreen">
-            <div class="container">
-                    <div class="jumbotron" class="mainContainer">
-                      <h1>Baking Trivia</h1>      
-                      <p>You have 1 minute to choose the correct answer for each question.</p>
-                    </div>
-                    <button type="button" class="btn btn-secondary btn-lg" onclick="start()">Click Here to Begin</button>
-                  </div>
 
+<body>
+
+  <!-- loading page -->
+  <div id="loadScreen">
+    <div class="container">
+      <div class="jumbotron" class="mainContainer">
+        <h1>Baking Trivia</h1>
+        <p>You have 1 minute to choose the correct answer for each question.</p>
+      </div>
+      <button type="button" class="btn btn-secondary btn-lg" onclick="start()">Click Here to Begin</button>
     </div>
 
-        <div class="container">
-                <div class="jumbotron" class="mainContainer">
-                  <h1>Baking Trivia</h1>      
-                  <p>You have 1 minute to choose the correct answer for each question.</p>
-                </div>
-                <p id="timerTitle">Time Remaining</p>
-                <h2 id="timer"></h2>           
-              </div>
+  </div>
 
-    <br>
-    <br>
-<div id=questionsContainer>
+  <!-- Title and timer    -->
+  <div class="container">
+    <div class="jumbotron" class="mainContainer">
+      <h1>Baking Trivia</h1>
+      <p>You have 1 minute to choose the correct answer for each question.</p>
+    </div>
+    <div>
+      <p id="timerTitle">Time Remaining</p>
+      <h2 id="timer"></h2>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <div id=questionsContainer>
     <form name="trivia">
-        1. What is blind baking?<br>
-        <input type="radio" name="q1" value="a"> not peeking in the oven<br>
-        <input type="radio" name="q1" value="b"> baking a crust without any filling<br>
-        <input type="radio" name="q1" value="c"> bake at any temperature
-        <br><br>
-        2. Which would not be used to stabilize whipped cream?<br>
-        <input type="radio" name="q2" value="a"> gelatin<br>
-        <input type="radio" name="q2" value="b"> confectioner's sugar<br>
-        <input type="radio" name="q2" value="c"> cream of tartar
-        <br><br>
-        3. How many is in a baker's dozen?<br>
-        <input type="radio" name="q3" value="a"> 11<br>
-        <input type="radio" name="q3" value="b"> 12<br>
-        <input type="radio" name="q3" value="c"> 13
-        <br><br>
-        4. How many tsp are in 1 tbs?<br>
-        <input type="radio" name="q4" value="a"> 2<br>
-        <input type="radio" name="q4" value="b"> 3<br>
-        <input type="radio" name="q4" value="c"> 4
-        <br><br>
-        5. How do you make your own buttermilk?<br>
-        <input type="radio" name="q5" value="a"> milk and butter<br>
-        <input type="radio" name="q5" value="b"> milk and vinegar<br>
-        <input type="radio" name="q5" value="c"> milk and sugar
-        <br><br>
-        6. Gum paste should not be eaten.<br>
-        <input type="radio" name="q6" value="a"> true<br>
-        <input type="radio" name="q6" value="b"> false<br>
-        <br><br>
-        7. It is best to cream butter when it is cold.<br>
-        <input type="radio" name="q7" value="a"> true<br>
-        <input type="radio" name="q7" value="b"> false<br>
-        <br><br>
-        8. French macarons are famous for their "feet."<br>
-        <input type="radio" name="q8" value="a"> true<br>
-        <input type="radio" name="q8" value="b"> false<br>
-        <br><br>
-        9. Bakers sometimes use scales to weigh ingredients.<br>
-        <input type="radio" name="q9" value="a"> true<br>
-        <input type="radio" name="q9" value="b"> false<br>
-        <br><br>
-        10. Margarine is a good substitute for butter when making frosting.<br>
-        <input type="radio" name="q10" value="a"> true<br>
-        <input type="radio" name="q10" value="b"> false<br>
-        <br><br>
-        
-        <button type="button" value="submit" onclick="checkAnswers()">Submit</button>
-      </form> 
- </div>   
+      1. What is blind baking?
+      <br>
+      <input type="radio" name="q1" value="a"> not peeking in the oven
+      <br>
+      <input type="radio" name="q1" value="b"> baking a crust without any filling
+      <br>
+      <input type="radio" name="q1" value="c"> bake at any temperature
+      <br>
+      <br> 2. Which would not be used to stabilize whipped cream?
+      <br>
+      <input type="radio" name="q2" value="a"> gelatin
+      <br>
+      <input type="radio" name="q2" value="b"> confectioner's sugar
+      <br>
+      <input type="radio" name="q2" value="c"> cream of tartar
+      <br>
+      <br> 3. How many is in a baker's dozen?
+      <br>
+      <input type="radio" name="q3" value="a"> 11
+      <br>
+      <input type="radio" name="q3" value="b"> 12
+      <br>
+      <input type="radio" name="q3" value="c"> 13
+      <br>
+      <br> 4. How many tsp are in 1 tbs?
+      <br>
+      <input type="radio" name="q4" value="a"> 2
+      <br>
+      <input type="radio" name="q4" value="b"> 3
+      <br>
+      <input type="radio" name="q4" value="c"> 4
+      <br>
+      <br> 5. How do you make your own buttermilk?
+      <br>
+      <input type="radio" name="q5" value="a"> milk and butter
+      <br>
+      <input type="radio" name="q5" value="b"> milk and vinegar
+      <br>
+      <input type="radio" name="q5" value="c"> milk and sugar
+      <br>
+      <br> 6. Gum paste should not be eaten.
+      <br>
+      <input type="radio" name="q6" value="a"> true
+      <br>
+      <input type="radio" name="q6" value="b"> false
+      <br>
+      <br>
+      <br> 7. It is best to cream butter when it is cold.
+      <br>
+      <input type="radio" name="q7" value="a"> true
+      <br>
+      <input type="radio" name="q7" value="b"> false
+      <br>
+      <br>
+      <br> 8. French macarons are famous for their "feet."
+      <br>
+      <input type="radio" name="q8" value="a"> true
+      <br>
+      <input type="radio" name="q8" value="b"> false
+      <br>
+      <br>
+      <br> 9. Bakers sometimes use scales to weigh ingredients.
+      <br>
+      <input type="radio" name="q9" value="a"> true
+      <br>
+      <input type="radio" name="q9" value="b"> false
+      <br>
+      <br>
+      <br> 10. Margarine is a good substitute for butter when making frosting.
+      <br>
+      <input type="radio" name="q10" value="a"> true
+      <br>
+      <input type="radio" name="q10" value="b"> false
+      <br>
+      <br>
+      <br>
 
- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>  
-    <script src="assets/javascript/game.js"></script>
+      <button type="button" value="submit" onclick="checkAnswers()">Submit</button>
+    </form>
+  </div>
+
+  <!-- result screen -->
+  <div id="resultScreen" id="show" id="hide">
+    <div class="container">
+      <div class="jumbotron" class="mainContainer">
+        <h1>Your Results</h1>
+        <p id="correctResult"></p>
+        <p id="incorrectResult"></p>
+        <p id="unansweredResult"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
