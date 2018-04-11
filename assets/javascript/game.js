@@ -120,8 +120,7 @@ function countdown(minutes) {
             incorrect++;
           }
          
-
-          
+          document.getElementById("resultScreen").classList.remove("hidden");
           document.getElementById("correctResult").innerHTML = ("Right: " + correct);
           document.getElementById("incorrectResult").innerHTML = ("Wrong: " + incorrect);  
           document.getElementById("unansweredResult").innerHTML = ("Unanswered: " + unanswered); 
