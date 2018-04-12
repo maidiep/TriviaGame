@@ -22,6 +22,13 @@ function countdown(minutes) {
 }
 // countdown(1);
 
+$(document).ready(function () {
+  $("#loadingScreen").show();
+   $("#resultScreen").hide();
+   $("#timerTitle").hide();
+   $("#questionsContainer").hide();
+
+});
 
 //function to check answers
     function checkAnswers() {
