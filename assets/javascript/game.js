@@ -120,26 +120,32 @@ function countdown(minutes) {
             incorrect++;
           }
          
-          document.getElementById("resultScreen").classList.remove("hidden");
+          //stop timer
+          clearTimeout(timeoutHandle);
+
+          //show result screen
+          $("#resultScreen").show();
+          $("#loadScreen").hide();
+          $("#questionsContainer").hide();
+
+          //show player their results
           document.getElementById("correctResult").innerHTML = ("Right: " + correct);
           document.getElementById("incorrectResult").innerHTML = ("Wrong: " + incorrect);  
           document.getElementById("unansweredResult").innerHTML = ("Unanswered: " + unanswered); 
-
-
-
-
-
-        // window.location.reload();
-        // console.log("You got " + correct + " right and " + incorrect + " wrong. You did not answer " + unanswered + " questions.");
-        // window.location.reload();
+         
+      
     }
 
-//    setTimeout (checkAnswers, 60 * 1000);
   
 //start screen
  function start() {
-    var start_button = document.getElementById("loadScreen");
-   document.body.removeChild(loadScreen);
+   $("#loadingScreen").show();
+   $("#resultScreen").hide();
+   $("#timerTitle").show();
+   $("#questionsContainer").show();
+
+  //   var start_button = document.getElementById("loadScreen");
+  //  document.body.removeChild(loadScreen);
    countdown(1);
    setTimeout (checkAnswers, 60 * 1000);
 };

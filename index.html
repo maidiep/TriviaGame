@@ -28,23 +28,34 @@
       </div>
       <button type="button" class="btn btn-secondary btn-lg" onclick="start()">Click Here to Begin</button>
     </div>
+  </div>
 
+  <!-- result screen -->
+  <div id="resultScreen">
+    <div class="container">
+      <div class="jumbotron" class="mainContainer">
+        <h1>Your Results</h1>
+        <p id="correctResult"></p>
+        <p id="incorrectResult"></p>
+        <p id="unansweredResult"></p>
+      </div>
+    </div>
   </div>
 
   <!-- Title and timer    -->
-  <div class="container">
-    <div class="jumbotron" class="mainContainer">
+  <!-- <div class="container">
+    <div class="jumbotron" id="mainContainer">
       <h1>Baking Trivia</h1>
       <p>You have 1 minute to choose the correct answer for each question.</p>
-    </div>
-    <div>
-      <p id="timerTitle">Time Remaining</p>
+    </div> -->
+    <div id="timerTitle">
+      <p>Time Remaining</p>
       <h2 id="timer"></h2>
     </div>
-  </div>
 
   <br>
   <br>
+  <!-- Trivia Questions -->
   <div id=questionsContainer>
     <form name="trivia">
       1. What is blind baking?
@@ -123,22 +134,11 @@
       <br>
       <br>
       <br>
-
+<!-- submit button -->
       <button type="button" value="submit" onclick="checkAnswers()">Submit</button>
     </form>
   </div>
 
-  <!-- result screen -->
-  <div id="resultScreen" class = "hidden">
-    <div class="container">
-      <div class="jumbotron" class="mainContainer">
-        <h1>Your Results</h1>
-        <p id="correctResult"></p>
-        <p id="incorrectResult"></p>
-        <p id="unansweredResult"></p>
-      </div>
-    </div>
-  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="assets/javascript/game.js"></script>
