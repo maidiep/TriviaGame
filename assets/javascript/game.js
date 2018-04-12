@@ -1,3 +1,4 @@
+//counter
 var timeoutHandle;
 function countdown(minutes) {
     var seconds = 60;
@@ -20,8 +21,8 @@ function countdown(minutes) {
     }
     tick();
 }
-// countdown(1);
 
+//landing screen
 $(document).ready(function () {
   $("#loadingScreen").show();
    $("#resultScreen").hide();
@@ -138,21 +139,19 @@ $(document).ready(function () {
           //show player their results
           document.getElementById("correctResult").innerHTML = ("Right: " + correct);
           document.getElementById("incorrectResult").innerHTML = ("Wrong: " + incorrect);  
-          document.getElementById("unansweredResult").innerHTML = ("Unanswered: " + unanswered); 
-         
-      
+          document.getElementById("unansweredResult").innerHTML = ("Unanswered: " + unanswered);     
     }
 
-  
-//start screen
+ 
+//start game
  function start() {
    $("#loadingScreen").show();
    $("#resultScreen").hide();
    $("#timerTitle").show();
    $("#questionsContainer").show();
-
-  //   var start_button = document.getElementById("loadScreen");
-  //  document.body.removeChild(loadScreen);
+   $("#button").hide();
    countdown(1);
    setTimeout (checkAnswers, 60 * 1000);
 };
+
+//end of game
