@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 //function to check answers
     function checkAnswers() {
-        var q1=document.trivia.q1.value;
+        var q1=document.trivia.q1.value;  
         var q2=document.trivia.q2.value;
         var q3=document.trivia.q3.value;
         var q4=document.trivia.q4.value;
@@ -142,7 +142,7 @@ $(document).ready(function () {
           document.getElementById("unansweredResult").innerHTML = ("Unanswered: " + unanswered);     
     }
 
- 
+
 //start game
  function start() {
    $("#loadingScreen").show();
